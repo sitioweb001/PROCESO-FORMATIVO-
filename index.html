@@ -1,0 +1,2440 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florecimiento Salvadoreño — Oferta Académica Becados 2026</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTAiIGZpbGw9IiMxQTIwNDAiLz4KICA8dGV4dCB4PSIzMiIgeT0iMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiNGNUE4MjQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5HT0IgU1Y8L3RleHQ+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzNiIgcj0iMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iMzIiIHk9IjQxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEzIiBmaWxsPSIjZmZmZmZmIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj5ESTwvdGV4dD4KICA8dGV4dCB4PSIzMiIgeT0iNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNiIgZmlsbD0iI0Y1QTgyNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGxldHRlci1zcGFjaW5nPSIwLjMiPklOVEVHUkFDScOTTjwvdGV4dD4KPC9zdmc+">
+<style>
+  :root {
+    --navy: #2A3260;
+    --navy-dark: #1A2040;
+    --navy-mid: #3D4A7A;
+    --gold: #F5A824;
+    --gold-light: #FFD07A;
+    --white: #FFFFFF;
+    --gray-bg: #F4F6FA;
+    --gray-card: #EEF1F8;
+    --gray-border: #D0D6E8;
+    --text-dark: #1A2040;
+    --text-mid: #4A5278;
+    --text-light: #7A82A8;
+    --green: #22A06B;
+    --red: #D94040;
+    --orange: #E87A20;
+    --shadow: 0 4px 16px rgba(42,50,96,0.10);
+    --shadow-hover: 0 8px 28px rgba(42,50,96,0.18);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --transition: 0.22s cubic-bezier(.4,0,.2,1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--gray-bg);
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+
+  /* ====== HEADER ====== */
+  header {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+    color: var(--white);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(245,168,36,0.10);
+    pointer-events: none;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 20%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* ====== zoom: adjust the height below to make the header logo bigger or smaller ====== */
+  .logo-img {
+    height: 80px; /* zoom */
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .logo-img-error-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .logo-stars {
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: var(--gold);
+  }
+
+  .logo-gov {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  .logo-dir {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .logo-prog {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .header-badge {
+    background: rgba(245,168,36,0.18);
+    border: 1px solid rgba(245,168,36,0.4);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+  }
+
+  .header-hero {
+    padding: 28px 32px 36px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .header-hero h1 {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--white);
+  }
+
+  .header-hero h1 span { color: var(--gold); }
+
+  .header-hero p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    margin: 0 auto 20px;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat-pill {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 30px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .stat-pill .num {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gold);
+  }
+  .stat-pill .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.3;
+  }
+
+  /* ====== MAIN LAYOUT ====== */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ====== SECTION TITLE ====== */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .section-title .icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .section-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .section-title p {
+    font-size: 13px;
+    color: var(--text-mid);
+  }
+
+  /* ====== INSTRUCCIONES ====== */
+  #instrucciones {
+    padding: 32px 0 0;
+  }
+
+  .instr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* Alert banner */
+  .alert-banner {
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .alert-banner.blue { background: #E8EDFB; border-left: 4px solid var(--navy); }
+  .alert-banner.gold { background: #FFF4DC; border-left: 4px solid var(--gold); }
+  .alert-banner.green { background: #E4F6EE; border-left: 4px solid var(--green); }
+  .alert-banner.red { background: #FDEAEA; border-left: 4px solid var(--red); }
+  .alert-banner .icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .alert-banner .content h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-dark); }
+  .alert-banner .content p, .alert-banner .content ul { font-size: 13px; color: var(--text-mid); }
+  .alert-banner .content ul { padding-left: 16px; margin-top: 4px; }
+  .alert-banner .content li { margin-bottom: 3px; }
+
+  /* Accordion */
+  .accordion {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .accordion-item { border-bottom: 1px solid var(--gray-border); }
+  .accordion-item:last-child { border-bottom: none; }
+
+  .accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    transition: background var(--transition);
+  }
+  .accordion-header:hover { background: var(--gray-bg); }
+  .accordion-header.open { background: var(--gray-bg); }
+
+  .acc-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .acc-icon.navy { background: #E8EDFB; }
+  .acc-icon.gold { background: #FFF4DC; }
+  .acc-icon.green { background: #E4F6EE; }
+  .acc-icon.red { background: #FDEAEA; }
+  .acc-icon.orange { background: #FEF0E4; }
+
+  .acc-title { flex: 1; }
+  .acc-title h3 { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+  .acc-title p { font-size: 12px; color: var(--text-light); margin-top: 1px; }
+
+  .acc-chevron {
+    font-size: 18px;
+    color: var(--text-light);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+  }
+  .accordion-header.open .acc-chevron { transform: rotate(180deg); }
+
+  .accordion-body {
+    display: none;
+    padding: 0 20px 18px 68px;
+    font-size: 13.5px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  .accordion-body.open { display: block; }
+  .accordion-body ul { padding-left: 18px; }
+  .accordion-body li { margin-bottom: 5px; }
+  .accordion-body strong { color: var(--text-dark); }
+  .accordion-body .tip-box {
+    background: var(--gray-bg);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-left: 3px solid var(--gold);
+  }
+  .accordion-body .tip-box p { font-size: 13px; }
+
+  /* Process steps */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .step-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .step-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-text { font-size: 12.5px; color: var(--text-dark); font-weight: 500; }
+
+  /* Req cards */
+  .req-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .req-card {
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    text-align: center;
+  }
+  .req-card.univ { background: #E8EDFB; border: 1.5px solid #B0BDEA; }
+  .req-card.tec { background: #FFF4DC; border: 1.5px solid #FFCD7A; }
+  .req-card.voc { background: #E4F6EE; border: 1.5px solid #8DD5B2; }
+  .req-card .big-num {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .req-card.univ .big-num { color: var(--navy); }
+  .req-card.tec .big-num { color: #B07A00; }
+  .req-card.voc .big-num { color: var(--green); }
+  .req-card .req-label { font-size: 12px; font-weight: 600; color: var(--text-dark); }
+  .req-card .req-sub { font-size: 11px; color: var(--text-mid); margin-top: 2px; }
+
+  /* ====== SEARCH BAR ====== */
+  #buscar-section {
+    padding: 28px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--gray-bg);
+    border-bottom: 1px solid var(--gray-border);
+  }
+
+  .search-bar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+  }
+
+  .search-input-wrap {
+    flex: 1;
+    min-width: 220px;
+    position: relative;
+  }
+  .search-input-wrap .search-icon {
+    position: absolute;
+    left: 14px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--text-light);
+    pointer-events: none;
+  }
+  #search-input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    border: 1.5px solid var(--gray-border);
+    border-radius: 30px;
+    font-size: 14px;
+    background: var(--white);
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  #search-input:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(42,50,96,0.08);
+  }
+
+  .view-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-border);
+    border-radius: 30px;
+    padding: 4px;
+  }
+  .view-tab {
+    padding: 8px 18px;
+    border-radius: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mid);
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  .view-tab.active {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .filter-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 14px;
+  }
+  .chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--gray-border);
+    background: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  .chip:hover { border-color: var(--navy); color: var(--navy); }
+  .chip.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .chip.gold-chip.active { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+
+  /* ====== CONTENT ====== */
+  #contenido {
+    padding: 24px 0 48px;
+  }
+
+  /* Region group */
+  .region-group {
+    margin-bottom: 32px;
+  }
+  .region-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-border);
+  }
+  .region-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .region-header h2 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--navy);
+  }
+  .region-count {
+    background: var(--gray-card);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-mid);
+  }
+
+  /* University cards */
+  .uni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  .uni-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .uni-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .uni-card-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--gray-border);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .uni-avatar {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--white);
+    flex-shrink: 0;
+    letter-spacing: -0.5px;
+  }
+
+  .uni-info { flex: 1; min-width: 0; }
+  .uni-info h3 { font-size: 13.5px; font-weight: 800; color: var(--text-dark); line-height: 1.3; }
+  .uni-info .uni-full { font-size: 11.5px; color: var(--text-mid); margin-top: 2px; line-height: 1.3; }
+  .uni-meta { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+
+  .badge {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+  .badge.depto { background: #E8EDFB; color: var(--navy); }
+  .badge.tipo-u { background: #E4F6EE; color: #1A7A4A; }
+  .badge.tipo-i { background: #FFF4DC; color: #8A6000; }
+  .badge.tipo-v { background: #FEF0E4; color: #8A3A00; }
+  .badge.tipo-et { background: #F3E8FB; color: #5A1A8A; }
+
+  .uni-toggle {
+    font-size: 18px;
+    color: var(--text-light);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .uni-card-header.open .uni-toggle { transform: rotate(180deg); }
+
+  .uni-card-body { display: none; padding: 14px 18px 16px; }
+  .uni-card-body.open { display: block; }
+
+  .career-count-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .career-count-badge {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .career-count-badge.lic { background: #E8EDFB; color: var(--navy); }
+  .career-count-badge.ing { background: #E4F6EE; color: #1A7A4A; }
+  .career-count-badge.tec { background: #FFF4DC; color: #8A6000; }
+  .career-count-badge.doc { background: #FDEAEA; color: #8A0000; }
+  .career-count-badge.prof { background: #F3E8FB; color: #5A1A8A; }
+  .career-count-badge.dip { background: #FEF0E4; color: #8A3A00; }
+
+  .career-section { margin-bottom: 12px; }
+  .career-section-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .career-section-title::before {
+    content: '';
+    display: inline-block;
+    width: 10px; height: 3px;
+    border-radius: 2px;
+  }
+  .career-section-title.lic::before { background: var(--navy); }
+  .career-section-title.ing::before { background: var(--green); }
+  .career-section-title.tec::before { background: var(--gold); }
+  .career-section-title.doc::before { background: var(--red); }
+  .career-section-title.prof::before { background: #8A1A8A; }
+  .career-section-title.dip::before { background: var(--orange); }
+
+  .career-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .career-item {
+    font-size: 12.5px;
+    color: var(--text-dark);
+    padding: 5px 10px;
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .career-item:hover { background: var(--gray-bg); }
+  .career-item.lic { border-left-color: var(--navy); }
+  .career-item.ing { border-left-color: var(--green); }
+  .career-item.tec { border-left-color: var(--gold); }
+  .career-item.doc { border-left-color: var(--red); }
+  .career-item.prof { border-left-color: #8A1A8A; }
+  .career-item.dip { border-left-color: var(--orange); }
+  .career-item.highlight { background: #FFF4DC; }
+
+  .search-highlight {
+    background: var(--gold-light);
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-mid);
+  }
+  .no-results .emoji { font-size: 48px; margin-bottom: 12px; }
+  .no-results p { font-size: 15px; }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--navy-dark);
+    color: var(--white);
+    padding: 48px 0 0;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+    align-items: start;
+  }
+
+  @media (max-width: 800px) {
+    .footer-main { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* Logo column */
+  .footer-logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* zoom: change height below to resize the footer logo */
+  .footer-logo-img {
+    height: 90px; /* zoom */
+    width: auto;
+    /* Make grey SVG paths appear white on dark footer */
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  .footer-logo-tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+    max-width: 220px;
+  }
+
+  /* Contact column */
+  .footer-contact-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .footer-contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.4;
+  }
+
+  .footer-contact-list li .fi {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .footer-contact-list a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .footer-contact-list a:hover { color: var(--gold); }
+
+  /* Links column */
+  .footer-links-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .footer-link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link-list a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color var(--transition);
+  }
+
+  .footer-link-list a:hover { color: var(--gold); }
+
+  /* Social icons */
+  .footer-social-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 20px 0 12px;
+  }
+
+  .footer-social-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background var(--transition), border-color var(--transition);
+  }
+
+  .social-icon:hover {
+    background: rgba(245,168,36,0.25);
+    border-color: var(--gold);
+  }
+
+  /* ADN Study button */
+  .adn-study-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, #E8961A 100%);
+    color: var(--navy-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 4px 16px rgba(245,168,36,0.35);
+  }
+
+  .adn-study-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245,168,36,0.45);
+  }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.38);
+    padding: 16px 0;
+  }
+
+  .footer-link {
+    color: var(--gold-light);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ====== QUIZ MODAL ====== */
+  .quiz-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,14,36,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .quiz-overlay.open { display: flex; }
+
+  .quiz-modal {
+    background: var(--white);
+    border-radius: 20px;
+    max-width: 640px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(10,14,36,0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quiz-header {
+    background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+    color: var(--white);
+    padding: 22px 24px 18px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .quiz-header h2 { font-size: 17px; font-weight: 800; }
+  .quiz-header p { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+
+  .quiz-close {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background var(--transition);
+  }
+  .quiz-close:hover { background: rgba(255,255,255,0.25); }
+
+  .quiz-progress-bar {
+    height: 4px;
+    background: var(--gray-border);
+  }
+  .quiz-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #E8961A);
+    transition: width 0.4s ease;
+  }
+
+  .quiz-body { padding: 24px; flex: 1; }
+
+  .quiz-counter {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .quiz-question { font-size: 16px; font-weight: 700; color: var(--text-dark); line-height: 1.4; margin-bottom: 18px; }
+
+  .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+
+  .quiz-option {
+    background: var(--gray-bg);
+    border: 2px solid var(--gray-border);
+    border-radius: 12px;
+    padding: 13px 16px;
+    font-size: 14px;
+    color: var(--text-dark);
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.4;
+    transition: border-color var(--transition), background var(--transition);
+  }
+
+  .quiz-option:hover:not(.disabled) { border-color: var(--navy); background: #EEF1F8; }
+  .quiz-option.correct { border-color: var(--green); background: #E4F6EE; color: #1A5C40; font-weight: 600; }
+  .quiz-option.wrong { border-color: var(--red); background: #FDEAEA; color: #8A0000; }
+  .quiz-option.disabled { cursor: default; }
+
+  .quiz-feedback {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    display: none;
+  }
+  .quiz-feedback.show { display: block; }
+  .quiz-feedback.correct { background: #E4F6EE; color: #1A5C40; border-left: 3px solid var(--green); }
+  .quiz-feedback.wrong { background: #FDEAEA; color: #8A0000; border-left: 3px solid var(--red); }
+
+  .quiz-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    justify-content: flex-end;
+  }
+
+  .quiz-btn {
+    padding: 10px 22px;
+    border-radius: 24px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .quiz-btn.primary { background: var(--navy); color: var(--white); }
+  .quiz-btn.primary:hover { background: var(--navy-mid); }
+  .quiz-btn.secondary { background: var(--gray-card); color: var(--text-mid); }
+  .quiz-btn.secondary:hover { background: var(--gray-border); }
+  .quiz-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .quiz-score-screen {
+    text-align: center;
+    padding: 10px 0 8px;
+  }
+
+  .quiz-score-circle {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--white);
+  }
+
+  .quiz-score-circle .big { font-size: 30px; font-weight: 900; color: var(--gold); }
+  .quiz-score-circle .small { font-size: 12px; color: rgba(255,255,255,0.65); }
+  .quiz-score-screen h3 { font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
+  .quiz-score-screen p { font-size: 14px; color: var(--text-mid); margin-bottom: 20px; }
+
+  /* ====== UTILITY ====== */
+  .hidden { display: none !important; }
+
+  .career-view-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .career-type-group { margin-bottom: 32px; }
+  .career-type-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gray-border);
+  }
+  .career-type-header h2 { font-size: 17px; font-weight: 800; color: var(--navy); }
+
+  .career-entry {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .career-entry h4 { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+  .career-entry .unis-offering {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .career-entry .uni-offering-item {
+    font-size: 12px;
+    color: var(--text-mid);
+    padding: 3px 0;
+    border-bottom: 1px dashed var(--gray-border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .career-entry .uni-offering-item:last-child { border-bottom: none; }
+  .career-entry .uni-offering-item .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--navy);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .header-top { padding: 14px 16px; }
+    .header-hero { padding: 20px 16px 28px; }
+    .container { padding: 0 12px; }
+    .uni-grid { grid-template-columns: 1fr; }
+    .view-tabs { flex-wrap: wrap; }
+    .view-tab { padding: 7px 14px; font-size: 12px; }
+    #search-input { font-size: 14px; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .req-cards { grid-template-columns: 1fr; }
+    .footer-logo-col { align-items: center; text-align: center; }
+    .footer-logo-tagline { text-align: center; }
+    .footer-social-row { justify-content: center; }
+    .footer-contact-col h4, .footer-links-col h4 { text-align: center; }
+    .footer-link-list { align-items: center; }
+    .footer-contact-list li { justify-content: flex-start; }
+    .quiz-modal { max-height: 95vh; border-radius: 16px 16px 0 0; margin-top: auto; }
+    .quiz-overlay { align-items: flex-end; padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header>
+  <div class="header-top">
+    <div class="logo-block">
+      <!-- zoom: adjust logo-img height in CSS above to resize the logo -->
+      <img src="logo.png" class="logo-img" alt="Dirección de Integración"
+        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+      <div id="logo-fallback" class="logo-img-error-fallback" style="display:none;">
+        <div class="logo-stars">★ ★ ★</div>
+        <div class="logo-gov">Gobierno de El Salvador</div>
+        <div class="logo-dir">Dirección de Integración</div>
+      </div>
+      <div>
+        <div class="logo-prog">🌟 Florecimiento Salvadoreño</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">Programa de Becas 2026</div>
+      </div>
+    </div>
+    <div class="header-badge">📅 Becados 2026</div>
+  </div>
+  <div class="header-hero">
+    <h1>Oferta Académica <span>Habilitada</span><br>para Becados 2026</h1>
+    <p>Carreras en universidades, escuelas técnicas y cursos vocacionales con convenio. Elige la institución más cerca de tu lugar de residencia.</p>
+    <div class="header-stats">
+      <div class="stat-pill"><span class="num">40+</span><span class="lbl">Instituciones<br>con convenio</span></div>
+      <div class="stat-pill"><span class="num">14</span><span class="lbl">Departamentos<br>cubiertos</span></div>
+      <div class="stat-pill"><span class="num">200+</span><span class="lbl">Carreras y<br>programas</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ====== INSTRUCCIONES ====== -->
+<section id="instrucciones">
+  <div class="container">
+
+    <div class="section-title" style="padding-top:28px;">
+      <div class="icon" style="background:#E8EDFB;">📋</div>
+      <div>
+        <h2>Lee esto antes de elegir tu carrera</h2>
+        <p>Información importante sobre el proceso formativo y cómo llenar tu formulario</p>
+      </div>
+    </div>
+
+    <!-- Alert banners -->
+    <div class="alert-banner gold">
+      <div class="icon">⚠️</div>
+      <div class="content">
+        <h3>Importante: Selección estratégica</h3>
+        <p>En el formulario deberás colocar <strong>3 opciones</strong>. Coloca como 1ª opción la universidad y carrera que más deseas. Las opciones 2 y 3 pueden ser la <strong>misma carrera en otras universidades</strong>. Si te interesan carreras en San Miguel, asegúrate de seleccionar instituciones que digan <strong>"San Miguel"</strong> y no "Usulután" (a menos que eso sea lo que quieras).</p>
+      </div>
+    </div>
+
+    <div class="alert-banner red">
+      <div class="icon">🏆</div>
+      <div class="content">
+        <h3>Prioridad por notas de evaluación</h3>
+        <p>Para <strong>licenciaturas e ingenierías con alta demanda</strong>, los cupos se asignan según las notas obtenidas en las evaluaciones de Lenguaje y Matemáticas (20 secciones los sábados). El estudiante con mejor nota tiene prioridad. <strong>¡Es muy importante salir bien en esas evaluaciones!</strong></p>
+      </div>
+    </div>
+
+    <div class="alert-banner blue">
+      <div class="icon">🔄</div>
+      <div class="content">
+        <h3>Segunda ronda de inscripciones</h3>
+        <p>Quienes no queden en la primera ronda por el tema de prioridad de notas, recibirán un <strong>nuevo formulario para inscribir 10 nuevas carreras en 10 distintas instituciones</strong> de educación superior. No te desesperes si no quedas en la primera ronda.</p>
+      </div>
+    </div>
+
+    <!-- Main accordion -->
+    <div class="accordion">
+
+      <!-- Proceso Formativo -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAcc(this)">
+          <div class="acc-icon navy">📚</div>
+          <div class="acc-title">
+            <h3>¿Cuáles son las actividades del Proceso Formativo?</h3>
+            <p>6 actividades que debes completar según tu tipo de carrera</p>
+          </div>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="process-steps">
+            <div class="step-card"><div class="step-num">1</div><div class="step-text">Curso ADN de la Pobreza y la Cultura de la Integración</div></div>
+            <div class="step-card"><div class="step-num">2</div><div class="step-text">Refuerzo Académico de Lenguaje y Matemáticas</div></div>
+            <div class="step-card"><div class="step-num">3</div><div class="step-text">Voluntariado en tu comunidad o centro educativo</div></div>
+            <div class="step-card"><div class="step-num">4</div><div class="step-text">Charlas con profesionales y personalidades</div></div>
+            <div class="step-card"><div class="step-num">5</div><div class="step-text">Visita a universidades o ferias de universidades</div></div>
+            <div class="step-card"><div class="step-num">6</div><div class="step-text">Participación en programas integradores o capacitaciones en empresas</div></div>
+          </div>
+          <p>Para más info: <a href="https://integracion.gob.sv/proceso-formativo/" target="_blank" style="color:var(--navy);font-weight:700;">integracion.gob.sv/proceso-formativo/</a></p>
+        </div>
+      </div>
+
+      <!-- Requisitos -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAcc(this)">
+          <div class="acc-icon gold">✅</div>
+          <div class="acc-title">
+            <h3>¿Cuántas actividades necesito completar?</h3>
+            <p>Depende del tipo de carrera que elijas</p>
+          </div>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="req-cards">
+            <div class="req-card univ">
+              <div class="big-num">6</div>
+              <div class="req-label">Carrera Universitaria</div>
+              <div class="req-sub">Licenciaturas, Ingenierías,<br>Arquitecturas, Profesorados,<br>Técnicos universitarios</div>
+            </div>
+            <div class="req-card tec">
+              <div class="big-num">4–5</div>
+              <div class="req-label">Carrera Técnica</div>
+              <div class="req-sub">Técnicos hasta 3 años<br>(ITCA, Dárdano, ITCA,<br>escuelas técnicas)</div>
+            </div>
+            <div class="req-card voc">
+              <div class="big-num">3</div>
+              <div class="req-label">Curso Vocacional</div>
+              <div class="req-sub">Cursos cortos,<br>diplomados<br>vocacionales</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Obligaciones -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAcc(this)">
+          <div class="acc-icon red">❗</div>
+          <div class="acc-title">
+            <h3>Actividades OBLIGATORIAS según tu carrera</h3>
+            <p>El Curso ADN, refuerzos y voluntariado tienen requisitos específicos</p>
+          </div>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>El <strong>Curso ADN</strong> es obligatorio para <strong>todas las carreras</strong>: universidades, escuelas técnicas y cursos vocacionales.</li>
+            <li>Los <strong>refuerzos académicos</strong> de Lenguaje y Matemáticas son obligatorios para <strong>carreras universitarias y técnicas</strong>.</li>
+            <li>El <strong>voluntariado</strong> es parte fundamental y obligatorio para <strong>carreras universitarias, técnicas y cursos vocacionales de 4 a 12 meses</strong>.</li>
+          </ul>
+          <div class="tip-box">
+            <p>💡 <strong>Consejo:</strong> Completa primero las actividades obligatorias para asegurarte de no quedar descalificado por incumplimiento.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consejos para el formulario -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAcc(this)">
+          <div class="acc-icon orange">💡</div>
+          <div class="acc-title">
+            <h3>Consejos para llenar el formulario de selección</h3>
+            <p>Cómo elegir tus 3 opciones estratégicamente</p>
+          </div>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>📌 En la <strong>1ª opción</strong>: coloca la universidad y carrera que MÁS deseas, como tu primera prioridad.</li>
+            <li>📌 En la <strong>2ª opción</strong>: puedes poner la misma carrera pero en otra universidad diferente.</li>
+            <li>📌 En la <strong>3ª opción</strong>: otra universidad que ofrezca la misma u otra carrera de tu interés.</li>
+          </ul>
+          <div class="tip-box">
+            <p>🗺️ <strong>Si quieres estudiar en San Miguel:</strong> Fíjate bien que la institución en el formulario diga "<strong>San Miguel</strong>". Si dice "Usulután", te enviarán a una universidad de ese departamento, a menos que eso sea lo que quieras.</p>
+          </div>
+          <div class="tip-box">
+            <p>📝 <strong>Si no quedas en la primera ronda</strong> (por prioridad de notas), recibirás un nuevo formulario para inscribir 10 nuevas opciones en 10 instituciones distintas. ¡No te rindas!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open English y Secretaría de Innovación -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAcc(this)">
+          <div class="acc-icon green">🌐</div>
+          <div class="acc-title">
+            <h3>Open English y Secretaría de Innovación (Platzi/ESIT)</h3>
+            <p>Diplomados complementarios para todos los becados universitarios y técnicos</p>
+          </div>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p>Los becados que estudien en universidades o escuelas técnicas cursarán <strong>simultáneamente</strong> los diplomados de <strong>Open English</strong> y <strong>Secretaría de Innovación</strong>.</p>
+          <ul style="margin-top:8px;">
+            <li><strong>Open English:</strong> Inglés virtual 24/7, profesores nativos, certificación Marco Común Europeo A1–B2. Duración: 2 años. Dedicación mínima: 4–5 horas semanales.</li>
+            <li><strong>ESIAP (Platzi):</strong> Cursos de Desarrollo Web, Marketing Digital, IA, Ciberseguridad, etc. 100% virtual. Duración: 1 hora a 6 meses.</li>
+            <li><strong>Secretaría de Innovación (ESIT):</strong> Dos rutas — tecnología y no-tecnología. 100% virtual, 3 horas semanales mínimo.</li>
+          </ul>
+          <div class="tip-box">
+            <p>🎓 Quienes estudien cursos vocacionales también podrán optar por Open English y Secretaría de Innovación como parte de sus diplomados.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </div><!-- /container -->
+</section>
+
+<!-- ====== BUSCADOR Y FILTROS ====== -->
+<div id="buscar-section">
+  <div class="container">
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Buscar carrera, universidad o departamento..." oninput="renderContent()">
+      </div>
+      <div class="view-tabs">
+        <button class="view-tab active" onclick="setView('region', this)">🗺️ Por Región</button>
+        <button class="view-tab" onclick="setView('universidad', this)">🏛️ Por Universidad</button>
+        <button class="view-tab" onclick="setView('carrera', this)">📖 Por Carrera</button>
+      </div>
+    </div>
+    <div class="filter-chips" id="depto-chips">
+      <button class="chip active" onclick="setDepto('todos', this)">Todos</button>
+      <button class="chip" onclick="setDepto('Santa Ana', this)">Santa Ana</button>
+      <button class="chip" onclick="setDepto('Sonsonate', this)">Sonsonate</button>
+      <button class="chip" onclick="setDepto('Chalatenango', this)">Chalatenango</button>
+      <button class="chip" onclick="setDepto('La Libertad', this)">La Libertad</button>
+      <button class="chip" onclick="setDepto('San Salvador', this)">San Salvador</button>
+      <button class="chip" onclick="setDepto('Cabañas', this)">Cabañas</button>
+      <button class="chip" onclick="setDepto('San Miguel', this)">San Miguel</button>
+      <button class="chip" onclick="setDepto('Usulután', this)">Usulután</button>
+      <button class="chip" onclick="setDepto('Morazán', this)">Morazán</button>
+      <button class="chip gold-chip" onclick="setDepto('Vocacional', this)">🎓 Vocacional / Técnica</button>
+    </div>
+    <div class="filter-chips" id="tipo-chips">
+      <button class="chip active" onclick="setTipo('todos', this)">Todos los tipos</button>
+      <button class="chip" onclick="setTipo('Licenciatura', this)">Licenciaturas</button>
+      <button class="chip" onclick="setTipo('Ingeniería', this)">Ingenierías</button>
+      <button class="chip" onclick="setTipo('Técnico', this)">Técnicos</button>
+      <button class="chip" onclick="setTipo('Doctorado', this)">Doctorado</button>
+      <button class="chip" onclick="setTipo('Profesorado', this)">Profesorados</button>
+      <button class="chip" onclick="setTipo('Diplomado', this)">Diplomados</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== CONTENIDO ====== -->
+<div id="contenido">
+  <div class="container" id="results-container">
+    <div style="text-align:center;padding:60px 0;color:var(--text-mid);">
+      <div style="font-size:32px;margin-bottom:12px;">⏳</div>
+      <p>Cargando oferta académica...</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+
+      <!-- Logo + tagline column -->
+      <div class="footer-logo-col">
+        <!-- zoom: adjust .footer-logo-img height in CSS to resize this logo -->
+        <img src="Logo_Gobierno.svg" class="footer-logo-img" alt="Gobierno de El Salvador – Dirección de Integración"
+          onerror="this.style.display='none';">
+        <p class="footer-logo-tagline">Dirección de Integración · Florecimiento Salvadoreño · Becas 2026</p>
+
+        <!-- ADN Study Button -->
+        <button class="adn-study-btn" onclick="openQuiz()">
+          🧠 Estudia para el Examen ADN
+        </button>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-contact-col">
+        <h4>Contacto</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="fi">📍</span>
+            <span>29 Avenida Norte y Calle Zacamil,<br>Distrito Mejicanos, San Salvador Centro</span>
+          </li>
+          <li>
+            <span class="fi">📞</span>
+            <a href="tel:+50322469900">+503 2246 9900</a>
+          </li>
+          <li>
+            <span class="fi">✉️</span>
+            <a href="mailto:info@integracion.gob.sv">info@integracion.gob.sv</a>
+          </li>
+        </ul>
+
+        <div class="footer-social-title">Únete a nuestra comunidad</div>
+        <div class="footer-social-row">
+          <a href="https://www.facebook.com/integracion.sv" target="_blank" class="social-icon" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(255,255,255,0.8)">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/integracion.sv" target="_blank" class="social-icon" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(255,255,255,0.8)">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/integracion_sv" target="_blank" class="social-icon" title="X (Twitter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(255,255,255,0.8)">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.737-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@integracion.sv" target="_blank" class="social-icon" title="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(255,255,255,0.8)">
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@integracion.sv" target="_blank" class="social-icon" title="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(255,255,255,0.8)">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links column -->
+      <div class="footer-links-col">
+        <h4>Enlaces</h4>
+        <ul class="footer-link-list">
+          <li>
+            <a href="https://www.google.com/maps/place/Dirección+de+Integración,+Sede+Central/@13.728765,-89.2026275,17z" target="_blank">
+              🗺️ Mapa del Sitio
+            </a>
+          </li>
+          <li>
+            <a href="https://script.google.com/macros/s/AKfycbw019XHEHSyqdncTVWlCDjhtCbzyWoOjpm5TPxFbvyUUpH2xk5JEW55LZedXDJ_goRd/exec" target="_blank">
+              🛡️ Sistema de Gestión Antisoborno
+            </a>
+          </li>
+          <li>
+            <a href="https://integracion.gob.sv/preguntas/" target="_blank">
+              ❓ Preguntas Frecuentes
+            </a>
+          </li>
+          <li>
+            <a href="https://integracion.gob.sv/proceso-formativo/" target="_blank">
+              📋 Proceso Formativo
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-main -->
+  </div><!-- /container -->
+
+  <hr class="footer-divider">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Dirección de Integración — Florecimiento Salvadoreño</span>
+      <span style="color:#ffffff;font-weight:800;letter-spacing:1px;text-shadow:0 0 12px rgba(255,255,255,0.4);">©BY EMERSON CASTRO</span>
+      <a href="https://integracion.gob.sv" target="_blank" class="footer-link">integracion.gob.sv</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== QUIZ MODAL: Banco de preguntas Examen ADN ====== -->
+<div class="quiz-overlay" id="quiz-overlay" onclick="closeQuizOutside(event)">
+  <div class="quiz-modal" id="quiz-modal">
+    <div class="quiz-header">
+      <div>
+        <h2>🧠 Examen ADN de la Pobreza</h2>
+        <p>Practica con el banco de preguntas oficial</p>
+      </div>
+      <button class="quiz-close" onclick="closeQuiz()">✕</button>
+    </div>
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="quiz-progress"></div>
+    </div>
+    <div class="quiz-body" id="quiz-body">
+      <!-- dynamically rendered -->
+    </div>
+  </div>
+</div>
+
+<script>
+// =====================================================
+// QUIZ: Banco de Preguntas ADN de la Pobreza
+// =====================================================
+const quizQuestions = [
+  {
+    q: "¿Cuál es el gran problema para salir de la pobreza?",
+    opts: ["La desigualdad.", "La desintegración social.", "No tener dinero."],
+    correct: 1
+  },
+  {
+    q: "¿Qué generan los embudos sociales?",
+    opts: [
+      "Un sentimiento de exclusión en aquellos que son discriminados o marginados.",
+      "Autoestima, confianza y desarrollo personal.",
+      "Marcan las condiciones de vida de quienes luchan en la supervivencia y de otros que viven en condiciones difíciles."
+    ],
+    correct: 2
+  },
+  {
+    q: "¿Qué busca construir la energía social?",
+    opts: [
+      "Busca construir lazos fuertes entre las personas, permitiendo una buena comunicación.",
+      "Construir relaciones y procesos integradores capaces de romper esos embudos sociales y provocar transformaciones de las condiciones de vida para salir de la pobreza.",
+      "Es la capacidad que tienen los cuerpos para construir un trabajo, es decir, para producir calor."
+    ],
+    correct: 1
+  },
+  {
+    q: "¿Qué genera una desintegración del país?",
+    opts: [
+      "Una sociedad dividida y poco desarrollo.",
+      "Una convivencia imperfecta entre todos los sectores.",
+      "Un decrecimiento económico inmediato en todo el país."
+    ],
+    correct: 0
+  },
+  {
+    q: "¿A qué nos referimos cuando hablamos de los dos mundos?",
+    opts: [
+      "Son dos espacios, donde en general en uno se vive mejor que en el otro.",
+      "Son dos espacios, donde las personas conviven en armonía.",
+      "Son espacios que se generan a partir de la inclusión."
+    ],
+    correct: 0
+  },
+  {
+    q: "¿Cómo alcanzaremos un verdadero desarrollo?",
+    opts: [
+      "Únicamente estudiando.",
+      "Teniendo más valores como persona.",
+      "Modificando la realidad en la que vivimos, construyendo puentes integradores."
+    ],
+    correct: 2
+  },
+  {
+    q: "¿Qué transformaciones se generan a partir de mi participación como voluntario en la comunidad?",
+    opts: [
+      "Mejorar mi relación con los demás.",
+      "Mejorar mis valores como persona.",
+      "Se busca un cambio de la realidad; una transformación social, educativa, política, económica, cultural y emocional."
+    ],
+    correct: 2
+  },
+  {
+    q: "¿Cuáles son los primeros embudos que debemos romper para comenzar a construir la integración?",
+    opts: [
+      "Hablar más a nuestros compañeros.",
+      "La falta de participación y comprensión de la realidad.",
+      "Terminar el bachillerato."
+    ],
+    correct: 1
+  },
+  {
+    q: "¿Qué son las relaciones integradoras?",
+    opts: [
+      "Conexiones o vínculos personales, humanos, sociales, laborales, institucionales, políticos y culturales.",
+      "Son aquellas que van construyendo puentes integradores que antes no existían.",
+      "Es la comunicación verbal entre dos o más personas."
+    ],
+    correct: 0
+  },
+  {
+    q: "¿Cuál es la intención de las relaciones integradoras?",
+    opts: [
+      "Fortalecer la inclusión entre las personas.",
+      "Edificar caminos que dignifiquen salidas de la pobreza y donde uno sienta que está construyendo su futuro.",
+      "Es un medio poco sostenible que se centra en programas recreativos."
+    ],
+    correct: 1
+  },
+  {
+    q: "Según la Cultura de la Integración, ¿qué diferencia fundamental existe entre inclusión e integración?",
+    opts: [
+      "La inclusión es un concepto más avanzado que la integración porque busca incorporar a todos.",
+      "La inclusión es una declaración enunciativa que no transforma la realidad, mientras que la integración es una construcción consensuada que transforma y democratiza el poder.",
+      "Ambas son lo mismo, solo que se usan en contextos diferentes."
+    ],
+    correct: 1
+  },
+  {
+    q: "¿Qué es el 'Estado de Florecimiento' al que aspira el Nuevo Modelo de Desarrollo Social?",
+    opts: [
+      "Es cuando las personas cubren únicamente sus necesidades primarias (alimentación, vivienda).",
+      "Es un estado donde están dadas las condiciones para potenciar al ser humano en todas sus dimensiones: salud física, mental, educativa, cultural y social.",
+      "Es un estado económico donde el país tiene altos índices de crecimiento del PIB."
+    ],
+    correct: 1
+  }
+];
+
+let quizState = {
+  current: 0,
+  score: 0,
+  answered: false,
+  shuffled: [],
+  done: false
+};
+
+function shuffleArray(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function openQuiz() {
+  quizState = { current: 0, score: 0, answered: false, done: false,
+    shuffled: shuffleArray(quizQuestions) };
+  document.getElementById('quiz-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderQuiz();
+}
+
+function closeQuiz() {
+  document.getElementById('quiz-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeQuizOutside(e) {
+  if (e.target === document.getElementById('quiz-overlay')) closeQuiz();
+}
+
+function renderQuiz() {
+  const body = document.getElementById('quiz-body');
+  const progress = document.getElementById('quiz-progress');
+  const total = quizState.shuffled.length;
+  const idx = quizState.current;
+
+  if (quizState.done) {
+    const pct = Math.round((quizState.score / total) * 100);
+    let msg = pct >= 80
+      ? '🎉 ¡Excelente! Estás listo para el examen ADN.'
+      : pct >= 60
+      ? '👍 Buen intento. Repasa los temas donde fallaste.'
+      : '📖 Sigue practicando. Revisa el material del Curso ADN.';
+    progress.style.width = '100%';
+    body.innerHTML = `
+      <div class="quiz-score-screen">
+        <div class="quiz-score-circle">
+          <span class="big">${quizState.score}/${total}</span>
+          <span class="small">${pct}%</span>
+        </div>
+        <h3>${pct >= 80 ? '¡Muy bien!' : pct >= 60 ? 'Buen trabajo' : 'Sigue practicando'}</h3>
+        <p>${msg}</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <button class="quiz-btn primary" onclick="openQuiz()">🔁 Reintentar</button>
+          <button class="quiz-btn secondary" onclick="closeQuiz()">Cerrar</button>
+        </div>
+      </div>`;
+    return;
+  }
+
+  progress.style.width = ((idx / total) * 100) + '%';
+  const q = quizState.shuffled[idx];
+
+  body.innerHTML = `
+    <div class="quiz-counter">Pregunta ${idx + 1} de ${total}</div>
+    <div class="quiz-question">${q.q}</div>
+    <div class="quiz-options">
+      ${q.opts.map((opt, i) => `
+        <button class="quiz-option" onclick="selectAnswer(this, ${i})">
+          <strong>${['A', 'B', 'C'][i]})</strong> ${opt}
+        </button>
+      `).join('')}
+    </div>
+    <div class="quiz-feedback" id="quiz-feedback"></div>
+    <div class="quiz-nav">
+      <button class="quiz-btn primary" id="quiz-next-btn" onclick="nextQuestion()" disabled>
+        ${idx + 1 < total ? 'Siguiente →' : 'Ver Resultado'}
+      </button>
+    </div>`;
+}
+
+function selectAnswer(btn, idx) {
+  if (quizState.answered) return;
+  quizState.answered = true;
+
+  const q = quizState.shuffled[quizState.current];
+  const options = document.querySelectorAll('.quiz-option');
+  options.forEach(o => o.classList.add('disabled'));
+
+  const feedback = document.getElementById('quiz-feedback');
+  const nextBtn = document.getElementById('quiz-next-btn');
+
+  if (idx === q.correct) {
+    btn.classList.add('correct');
+    quizState.score++;
+    feedback.className = 'quiz-feedback show correct';
+    feedback.innerHTML = '✅ <strong>¡Correcto!</strong>';
+  } else {
+    btn.classList.add('wrong');
+    options[q.correct].classList.add('correct');
+    feedback.className = 'quiz-feedback show wrong';
+    feedback.innerHTML = `❌ <strong>Incorrecto.</strong> La respuesta correcta es: <em>${q.opts[q.correct]}</em>`;
+  }
+
+  nextBtn.disabled = false;
+}
+
+function nextQuestion() {
+  quizState.current++;
+  quizState.answered = false;
+  if (quizState.current >= quizState.shuffled.length) {
+    quizState.done = true;
+  }
+  renderQuiz();
+}
+</script>
+
+<script>
+// =====================================================
+// DATA: All institutions and careers
+// =====================================================
+const instituciones = [
+
+// ===== SANTA ANA =====
+{
+  id:"ieproes-sta", siglas:"IEPROES", nombre:"Instituto Especializado de Profesionales de la Salud",
+  depto:"Santa Ana", region:"Occidente", color:"#2A6E8C",
+  carreras:{
+    "Licenciaturas":["Licenciatura en Enfermería","Licenciatura en Psicología de la Salud","Licenciatura en Nutrición"],
+    "Técnicos":["Técnico en Enfermería","Técnico en Salud Ambiental"]
+  }
+},
+{
+  id:"unicaes-sta", siglas:"UNICAES", nombre:"Universidad Católica de El Salvador",
+  depto:"Santa Ana", region:"Occidente", color:"#1A5C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Diseño Gráfico Publicitario","Lic. en Enfermería","Lic. en Gastronomía y Hostelería","Lic. en Gestión de Negocios Digitales","Lic. en Idioma Inglés","Lic. en Logística y Operaciones","Lic. en Mercadeo y Negocios Internacionales","Lic. en Nutrición y Dietética","Lic. en Periodismo y Comunicación Audiovisual","Lic. en Química y Farmacia","Lic. en Relaciones Internacionales y Comercio Exterior","Lic. en Ciencias Religiosas"],
+    "Ingenierías":["Arquitectura","Ingeniería Agronómica","Ingeniería Civil","Ingeniería Eléctrica","Ingeniería en Desarrollo de Software","Ingeniería en Sistemas Informáticos","Ingeniería en Tecnología y Procesamiento de Alimentos","Ingeniería Industrial","Ingeniería Mecánica","Ingeniería Química"],
+    "Técnicos":["Técnico en Enfermería"]
+  }
+},
+{
+  id:"uma-sta", siglas:"UMA", nombre:"Universidad Modular Abierta",
+  depto:"Santa Ana", region:"Occidente", color:"#6A3C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración Turística","Lic. en Ciencias de la Educación — Inglés","Lic. en Ciencias de la Educación — Lenguaje y Literatura","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Informática","Lic. en Mercadotecnia","Lic. en Psicología"],
+    "Profesorados":["Prof. en Ciencias Sociales para Tercer Ciclo y Media","Prof. en Lenguaje y Literatura para Tercer Ciclo y Media","Prof. y Lic. en Educación Inicial y Parvularia"],
+    "Técnicos":["Técnico en Contaduría Pública","Técnico en Software"]
+  }
+},
+{
+  id:"itca-sta", siglas:"ITCA-FEPADE", nombre:"Escuela Especializada en Ingeniería",
+  depto:"Santa Ana", region:"Occidente", color:"#1A7A4A",
+  carreras:{
+    "Técnicos":["Técnico en Ingeniería Eléctrica","Técnico en Ingeniería de Desarrollo de Software","Técnico en Hardware Computacional","Técnico en Laboratorio Químico"]
+  }
+},
+
+// ===== SONSONATE =====
+{
+  id:"uso-son", siglas:"USO", nombre:"Universidad de Sonsonate",
+  depto:"Sonsonate", region:"Occidente", color:"#2A6E3C",
+  carreras:{
+    "Licenciaturas":["Lic. en Contaduría Pública","Lic. en Administración de Empresas","Lic. en Mercadeo","Lic. en Psicología","Lic. en Ciencias Naturales","Lic. en Ciencias Jurídicas"],
+    "Ingenierías":["Ingeniería en Sistemas Computacionales","Ingeniería Industrial","Ingeniería en Agronegocios","Ingeniería Eléctrica"],
+    "Técnicos":["Técnico en Logística y Aduana"]
+  }
+},
+{
+  id:"uma-son", siglas:"UMA", nombre:"Universidad Modular Abierta",
+  depto:"Sonsonate", region:"Occidente", color:"#6A3C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración Turística","Lic. en Ciencias de la Educación — Inglés","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Informática","Lic. en Mercadotecnia","Lic. en Psicología","Lic. en Ciencias de la Educación — Lenguaje y Literatura"],
+    "Profesorados":["Prof. en Ciencias Sociales para Tercer Ciclo y Media","Prof. en Lenguaje y Literatura para Tercer Ciclo y Media","Prof. y Lic. en Educación Inicial y Parvularia"],
+    "Técnicos":["Técnico en Contaduría Pública","Técnico en Software"]
+  }
+},
+{
+  id:"unab-son", siglas:"UNAB", nombre:"Universidad Andrés Bello",
+  depto:"Sonsonate", region:"Occidente", color:"#D94040",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Computación Gerencial","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Diseño Gráfico Multimedia","Lic. en Enfermería","Lic. en Gestión del Turismo","Lic. en Idioma Inglés con Énfasis en Negocios Digitales","Lic. en Laboratorio Clínico","Lic. en Logística y Comercio Internacional","Lic. en Mercadeo Estratégico","Lic. en Nutrición","Lic. en Psicología","Lic. en Trabajo Social"],
+    "Ingenierías":["Ingeniería en Sistemas y Computación"],
+    "Técnicos":["Técnico en Mercadeo","Técnico en Turismo","Técnico en Marketing Digital y E-commerce","Técnico en Computación","Técnico en Enfermería"]
+  }
+},
+
+// ===== CHALATENANGO =====
+{
+  id:"umoar-cha", siglas:"UMOAR", nombre:"Universidad Monseñor Óscar Arnulfo Romero",
+  depto:"Chalatenango", region:"Norte", color:"#7A4A2A",
+  carreras:{
+    "Licenciaturas":["Lic. en Ciencias Jurídicas","Lic. en Administración de Empresas","Lic. en Ciencias de la Computación","Lic. en Contaduría Pública"],
+    "Ingenierías":["Ingeniería en Agronomía"]
+  }
+},
+{
+  id:"unab-cha", siglas:"UNAB", nombre:"Universidad Andrés Bello",
+  depto:"Chalatenango", region:"Norte", color:"#D94040",
+  carreras:{
+    "Licenciaturas":["Lic. en Comunicaciones","Lic. en Ciencias Jurídicas","Lic. en Trabajo Social","Lic. en Psicología","Lic. en Idioma Inglés con Énfasis en Negocios Digitales","Lic. en Computación Gerencial","Lic. en Diseño Gráfico Multimedia","Lic. en Administración de Empresas","Lic. en Contaduría Pública","Lic. en Mercadeo Estratégico","Lic. en Relaciones Públicas","Lic. en Gestión del Turismo","Lic. en Enfermería","Lic. en Laboratorio Clínico","Lic. en Nutrición"],
+    "Ingenierías":["Ingeniería en Sistemas y Computación","Ingeniería en Innovación Agroindustrial","Ingeniería en Agronomía"],
+    "Técnicos":["Técnico en Marketing Digital y E-commerce","Técnico en Diseño Gráfico","Técnico en Idioma Inglés","Técnico en Enfermería","Técnico en Contabilidad","Técnico en Turismo"]
+  }
+},
+{
+  id:"itcha-cha", siglas:"ITCHA", nombre:"Instituto Tecnológico de Chalatenango",
+  depto:"Chalatenango", region:"Norte", color:"#1A7A4A",
+  carreras:{
+    "Técnicos":["Técnico en Ingeniería Civil","Técnico en Ingeniería en Computación","Técnico en Mercadeo","Técnico en Ingeniería Eléctrica","Técnico en Agroindustria","Técnico en Gestión de Turismo Alternativo"]
+  }
+},
+
+// ===== LA LIBERTAD =====
+{
+  id:"itca-lib", siglas:"ITCA-FEPADE", nombre:"Escuela Especializada en Ingeniería",
+  depto:"La Libertad", region:"Centro", color:"#1A7A4A",
+  carreras:{
+    "Técnicos":["Técnico en Ingeniería Eléctrica","Técnico en Infraestructura de Redes Informáticas","Técnico en Energías Renovables","Técnico en Hardware Computacional","Técnico en Ingeniería Industrial","Técnico en Laboratorio Químico","Técnico en Administración de Empresas Gastronómicas"]
+  }
+},
+{
+  id:"ujmd-lib", siglas:"UJMD", nombre:"Universidad Dr. José Matías Delgado",
+  depto:"La Libertad", region:"Centro", color:"#1A5C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias de la Comunicación","Lic. en Ciencias Jurídicas","Lic. en Diseño Gráfico","Lic. en Economía","Lic. en Enfermería","Lic. en Finanzas Empresariales","Lic. en Gestión Tecnológica y Analítica de Datos","Lic. en Innovación y Transformación Digital","Lic. en Marketing Estratégico","Lic. en Música","Lic. en Psicología","Lic. en Relaciones Internacionales","Lic. en Diseño del Producto"],
+    "Ingenierías":["Arquitectura","Arquitectura de Interiores"],
+    "Técnicos":["Técnico en Artes Dramáticas"]
+  }
+},
+{
+  id:"monica-lib", siglas:"EMH", nombre:"Escuela Mónica Herrera",
+  depto:"La Libertad", region:"Centro", color:"#8A1A6A",
+  carreras:{
+    "Licenciaturas":["Lic. en Comunicación y Estrategia Digital","Lic. en Comunicaciones Integradas de Marketing","Lic. en Diseño Estratégico"]
+  }
+},
+
+// ===== SAN SALVADOR =====
+{
+  id:"uped-ss", siglas:"UPED", nombre:"Universidad Pedagógica de El Salvador",
+  depto:"San Salvador", region:"Centro", color:"#2A6E8C",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Educación — Ciencias Naturales","Lic. en Educación — Ciencias Sociales","Lic. en Educación — Educación Física y Deportes","Lic. en Educación — Idioma Inglés","Lic. en Educación — Lenguaje y Literatura","Lic. en Educación — Matemática","Lic. en Educación Inicial y Parvularia","Lic. en Gerencia Informática","Lic. en Idioma Inglés (Semipresencial)","Lic. en Mercadeo","Lic. en Psicología (Semipresencial)","Lic. en Trabajo Social (Semipresencial)"],
+    "Profesorados":["Profesorado en Educación Física y Deporte","Profesorado en Educación Inicial y Parvularia"],
+    "Ingenierías":["Ingeniería Industrial","Ingeniería en Sistemas y Computación"],
+    "Técnicos":["Técnico en Mercadeo","Técnico en Contaduría Pública","Técnico en Administración de Empresas","Técnico en Sistemas de Computación","Técnico en Logística y Cadena de Suministro"]
+  }
+},
+{
+  id:"upes-ss", siglas:"UPES", nombre:"Universidad Politécnica de El Salvador",
+  depto:"San Salvador", region:"Centro", color:"#8A5A00",
+  carreras:{
+    "Licenciaturas":["Lic. en Contaduría Pública","Lic. en Administración de Negocio","Lic. en Marketing","Lic. en Ciencias Jurídicas"],
+    "Ingenierías":["Arquitectura","Ingeniería Eléctrica","Ingeniería Industrial","Ingeniería Civil","Ingeniería en Ciencias de la Computación"],
+    "Técnicos":["Técnico en Tecnologías de la Información"]
+  }
+},
+{
+  id:"ufg-ss", siglas:"UFG", nombre:"Universidad Francisco Gavidia",
+  depto:"San Salvador", region:"Centro", color:"#1A5C3C",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas Turísticas","Lic. en Animación Digital y Videojuegos","Lic. en Ciencias Jurídicas","Lic. en Comunicación Corporativa","Lic. en Contaduría Pública","Lic. en Criminología","Lic. en Diseño de Modas","Lic. en Diseño Gráfico Publicitario","Lic. en Diseño Gráfico Web Multimedia","Lic. en Economía Internacional","Lic. en Gestión Estratégica de Hoteles y Restaurantes","Lic. en Idioma Inglés","Lic. en Mercadotecnia y Publicidad","Lic. en Psicología","Lic. en Relaciones Internacionales","Lic. en Sistemas Informáticos"],
+    "Ingenierías":["Arquitectura","Ingeniería en Control Eléctrico","Ingeniería en Desarrollo de Software","Ingeniería en Diseño y Desarrollo de Videojuegos","Ingeniería en Telecomunicaciones"],
+    "Técnicos":["Técnico en Animación Digital y Videojuegos","Técnico en Diseño Gráfico Publicitario","Técnico en Sistemas de Computación"]
+  }
+},
+{
+  id:"udb-ss", siglas:"UDB", nombre:"Universidad Don Bosco",
+  depto:"San Salvador", region:"Centro", color:"#C05A00",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias de la Comunicación","Lic. en Diseño Gráfico","Lic. en Idiomas — Adquisición de Lenguas Extranjeras","Lic. en Idiomas — Turismo","Lic. en Marketing"],
+    "Ingenierías":["Ingeniería en Aeronáutica","Ingeniería en Ciencias de la Computación","Ingeniería Industrial"],
+    "Técnicos":["Técnico en Diseño Gráfico","Técnico en Guía de Turismo Bilingüe","Técnico en Ingeniería Biomédica","Técnico en Ingeniería de Ciencias de la Computación","Técnico en Ingeniería Eléctrica","Técnico en Ingeniería Electrónica","Técnico en Mantenimiento Aeronáutico","Técnico en Multimedia"]
+  }
+},
+{
+  id:"uca-ss", siglas:"UCA", nombre:"Universidad Centroamericana José Simeón Cañas",
+  depto:"San Salvador", region:"Centro", color:"#1A3C7A",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Economía","Lic. en Finanzas","Lic. en Idioma Inglés","Lic. en Mercadeo"],
+    "Ingenierías":["Ingeniería Energética","Ingeniería Mecánica","Ingeniería Eléctrica"],
+    "Técnicos":["Técnico en Marketing Digital"]
+  }
+},
+{
+  id:"utec-ss", siglas:"UTEC", nombre:"Universidad Tecnológica",
+  depto:"San Salvador", region:"Centro", color:"#E87A20",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración de Empresas — Computación","Lic. en Administración de Empresas Turísticas","Lic. en Ciencias Jurídicas","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Diseño Gráfico","Lic. en Idioma Inglés","Lic. en Informática","Lic. en Mercadeo","Lic. en Negocios Internacionales","Lic. en Psicología"],
+    "Ingenierías":["Ingeniería Industrial","Ingeniería en Sistemas y Computación","Arquitectura"],
+    "Técnicos":["Técnico en Administración Turística","Técnico en Automatización Industrial","Técnico en Diseño Gráfico","Técnico en Ingeniería de Redes Computacionales","Técnico en Ingeniería en Software","Técnico en Mercadeo y Ventas","Técnico en Relaciones Públicas"]
+  }
+},
+{
+  id:"uls-ss", siglas:"ULS", nombre:"Universidad Luterana Salvadoreña",
+  depto:"San Salvador", region:"Centro", color:"#4A8A2A",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas"],
+    "Ingenierías":["Ingeniería Agroecológica"]
+  }
+},
+{
+  id:"uees-ss", siglas:"UEES", nombre:"Universidad Evangélica de El Salvador",
+  depto:"San Salvador", region:"Centro", color:"#7A2A8A",
+  carreras:{
+    "Doctorado":["Doctorado en Medicina"],
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Educación Inicial y Parvularia","Lic. en Enfermería","Lic. en Lenguas Modernas","Lic. en Marketing","Lic. en Nutrición y Dietética","Lic. en Psicología","Lic. en Relaciones y Negocios Internacionales","Lic. en Traducción e Interpretación"],
+    "Ingenierías":["Ingeniería en Desarrollo de Contenidos Digitales y Robótica Aplicada","Ingeniería en Desarrollo de Software y Ciencias de Datos"],
+    "Técnicos":["Técnico en Marketing Digital","Técnico en Asistencia Odontológica","Técnico en Redes y Ciberseguridad"]
+  }
+},
+{
+  id:"usam-ss", siglas:"USAM", nombre:"Universidad Salvadoreña Alberto Masferrer",
+  depto:"San Salvador", region:"Centro", color:"#8A0000",
+  carreras:{
+    "Doctorado":["Doctorado en Medicina"],
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Comunicaciones Estratégicas","Lic. en Contaduría Pública","Lic. en Enfermería","Lic. en Medicina Veterinaria y Zootecnia","Lic. en Mercadeo","Lic. en Química y Farmacia","Lic. en Sistemas Informáticos"],
+    "Técnicos":["Técnico en Ingeniería de Desarrollo de Software","Técnico en Ingeniería de Sistemas de Computación","Técnico en Ingeniería de Redes Computacionales y Seguridad","Técnico en Marketing Estratégico","Técnico en Publicidad"]
+  }
+},
+{
+  id:"unab-ss", siglas:"UNAB", nombre:"Universidad Andrés Bello",
+  depto:"San Salvador", region:"Centro", color:"#D94040",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Computación Gerencial","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Diseño Gráfico Multimedia","Lic. en Enfermería","Lic. en Gestión del Turismo","Lic. en Idioma Inglés con Énfasis en Negocios Digitales","Lic. en Laboratorio Clínico","Lic. en Mercadeo Estratégico","Lic. en Optometría","Lic. en Nutrición","Lic. en Psicología","Lic. en Radiología e Imágenes","Lic. en Trabajo Social","Lic. en Relaciones Públicas"],
+    "Ingenierías":["Ingeniería en Sistemas y Computación"],
+    "Técnicos":["Técnico en Mercadeo","Técnico en Turismo","Técnico en Marketing Digital y E-commerce","Técnico en Computación","Técnico en Diseño Gráfico","Técnico en Optometría","Técnico en Enfermería","Técnico en Salvamento y Extinción de Incendios"]
+  }
+},
+{
+  id:"uma-ss", siglas:"UMA", nombre:"Universidad Modular Abierta",
+  depto:"San Salvador", region:"Centro", color:"#6A3C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración Turística","Lic. en Contaduría Pública","Lic. en Ciencias Jurídicas","Lic. en Mercadotecnia","Lic. en Informática","Lic. en Psicología"],
+    "Profesorados":["Prof. y Lic. en Educación Inicial y Parvularia"],
+    "Técnicos":["Técnico en Software","Técnico en Empresas Turísticas"]
+  }
+},
+{
+  id:"iehes-ss", siglas:"IEHES", nombre:"Instituto Especializado Hospital El Salvador",
+  depto:"San Salvador", region:"Centro", color:"#2A6E8C",
+  carreras:{
+    "Licenciaturas":["Lic. en Enfermería"],
+    "Técnicos":["Técnico en Química","Técnico en Farmacia"]
+  }
+},
+{
+  id:"ucad-ss", siglas:"UCAD", nombre:"Universidad Cristiana de las Asambleas de Dios",
+  depto:"San Salvador", region:"Centro", color:"#5A4A9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Ciencias de la Comunicación","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Teología — Ministerio Pastoral","Lic. en Teología — Misionología"],
+    "Ingenierías":["Ingeniería en Ciencias de la Computación"],
+    "Técnicos":["Técnico en Multimedia"]
+  }
+},
+{
+  id:"itexsal-ss", siglas:"ITEXSAL", nombre:"Instituto Técnico EXSAL",
+  depto:"San Salvador", region:"Centro", color:"#1A4A7A",
+  carreras:{
+    "Técnicos":["Técnico en Mantenimiento Aeronáutico"]
+  }
+},
+{
+  id:"ieproes-ss", siglas:"IEPROES", nombre:"Instituto Especializado de Profesionales de la Salud",
+  depto:"San Salvador", region:"Centro", color:"#2A6E8C",
+  carreras:{
+    "Licenciaturas":["Lic. en Enfermería","Lic. en Psicología de la Salud","Lic. en Nutrición"],
+    "Técnicos":["Técnico en Enfermería","Técnico en Salud Ambiental"]
+  }
+},
+{
+  id:"esal-ss", siglas:"ESAL/ASDER", nombre:"Escuela Salvadoreña de Locución de ASDER",
+  depto:"San Salvador", region:"Centro", color:"#8A6A00",
+  carreras:{
+    "Diplomados":["Diplomado en Locución Nacional e Internacional (6 meses)","Diplomado en Comunicación Deportiva (6 meses)"]
+  }
+},
+{
+  id:"dardano-ilo", siglas:"DÁRDANO", nombre:"Grupo Dárdano Aeroservicios",
+  depto:"San Salvador", region:"Centro", color:"#1A3C7A",
+  carreras:{
+    "Técnicos":["Técnico en Mantenimiento Aeronáutico"]
+  }
+},
+{
+  id:"ets-ss", siglas:"ETS", nombre:"Escuela Técnica para la Salud",
+  depto:"San Salvador", region:"Centro", color:"#2A6E8C",
+  carreras:{
+    "Técnicos":["Técnico en Enfermería"]
+  }
+},
+
+// ===== CABAÑAS =====
+{
+  id:"unicaes-cab", siglas:"UNICAES", nombre:"Universidad Católica de El Salvador",
+  depto:"Cabañas", region:"Norte", color:"#1A5C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Idioma Inglés","Lic. en Enfermería","Lic. en Mercadeo y Negocios Internacionales"],
+    "Ingenierías":["Ingeniería en Desarrollo de Software","Ingeniería en Sistemas Informáticos","Ingeniería en Tecnología y Procesamiento de Alimentos"],
+    "Técnicos":["Técnico en Enfermería"]
+  }
+},
+{
+  id:"uls-cab", siglas:"ULS", nombre:"Universidad Luterana Salvadoreña",
+  depto:"Cabañas", region:"Norte", color:"#4A8A2A",
+  carreras:{
+    "Licenciaturas":["Lic. en Idioma Inglés","Lic. en Ciencias de la Computación","Lic. en Ciencias Jurídicas","Lic. en Trabajo Social","Lic. en Contaduría Pública","Lic. en Administración de Empresas"],
+    "Técnicos":["Técnico en Enfermería"]
+  }
+},
+
+// ===== SAN MIGUEL =====
+{
+  id:"unab-smig", siglas:"UNAB", nombre:"Universidad Andrés Bello",
+  depto:"San Miguel", region:"Oriente", color:"#D94040",
+  carreras:{
+    "Licenciaturas":["Lic. en Ciencias Jurídicas","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Diseño Gráfico Multimedia","Lic. en Enfermería","Lic. en Gestión del Turismo","Lic. en Idioma Inglés con Énfasis en Negocios Digitales","Lic. en Laboratorio Clínico","Lic. en Mercadeo Estratégico","Lic. en Nutrición","Lic. en Psicología","Lic. en Trabajo Social"],
+    "Ingenierías":["Ingeniería en Sistemas y Computación"],
+    "Técnicos":["Técnico en Computación","Técnico en Enfermería","Técnico en Marketing Digital y E-commerce","Técnico en Mercadeo","Técnico en Optometría","Técnico en Turismo"]
+  }
+},
+{
+  id:"univo-smig", siglas:"UNIVO", nombre:"Universidad de Oriente",
+  depto:"San Miguel", region:"Oriente", color:"#1A5C7A",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Ciencias Jurídicas","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Diseño Gráfico y Multimedia","Lic. en Enfermería","Lic. en Inglés","Lic. en Laboratorio Clínico","Lic. en Marketing y Publicidad Digital","Lic. en Medicina Veterinaria","Lic. en Mercadotecnia","Lic. en Psicología","Lic. en Psicopedagogía","Lic. en Relaciones y Negocios","Lic. en Relaciones y Negocios Internacionales","Lic. en Turismo"],
+    "Profesorados":["Prof. en Educación Artística","Prof. en Educación Física","Prof. en Educación Física y Deportes","Prof. en Educación Inicial","Prof. en Educación Inicial y Parvularia","Prof. en Idioma Inglés","Prof. en Matemáticas"],
+    "Ingenierías":["Arquitectura","Ingeniería Agronómica","Ingeniería Civil","Ingeniería en Agroindustria","Ingeniería en Desarrollo de Software","Ingeniería en Energía y Eficiencia Energética","Ingeniería Industrial"],
+    "Técnicos":["Técnico en Banca y Negocios","Técnico en Diseño Gráfico","Técnico en Diseño y Manufactura Industrial","Técnico en Idioma Inglés","Tecnólogo en Enfermería"]
+  }
+},
+{
+  id:"ieproes-smig", siglas:"IEPROES", nombre:"Instituto Especializado de Profesionales de la Salud",
+  depto:"San Miguel", region:"Oriente", color:"#2A6E8C",
+  carreras:{
+    "Licenciaturas":["Lic. en Enfermería","Lic. en Psicología de la Salud","Lic. en Nutrición"],
+    "Técnicos":["Técnico en Enfermería"]
+  }
+},
+{
+  id:"ugb-smig", siglas:"UGB", nombre:"Universidad Gerardo Barrios",
+  depto:"San Miguel", region:"Oriente", color:"#2A5C8A",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración de Empresas y Desarrollo Turístico","Lic. en Ciencias Jurídicas","Lic. en Comunicaciones","Lic. en Contaduría Pública","Lic. en Educación Inicial y Parvularia","Lic. en Idioma Inglés","Lic. en Marketing y Negocios Digitales","Lic. en Psicología","Lic. en Relaciones y Negocios Internacionales"],
+    "Profesorados":["Prof. en Educación Inicial y Parvularia","Prof. en Idioma Inglés para Tercer Ciclo y Media","Prof. en Lenguaje y Literatura para Tercer Ciclo y Media"],
+    "Ingenierías":["Ingeniería Civil","Ingeniería en Inteligencia de Negocios","Ingeniería en Sistemas y Redes Informáticas","Ingeniería Industrial","Arquitectura"],
+    "Técnicos":["Técnico en Diseño Gráfico","Técnico en Enfermería","Técnico en Idioma Inglés","Técnico en Ingeniería Civil y Construcción","Técnico en Ingeniería en Sistemas y Redes Informáticas","Técnico en Marketing y Publicidad Digital"]
+  }
+},
+{
+  id:"uma-smig", siglas:"UMA", nombre:"Universidad Modular Abierta",
+  depto:"San Miguel", region:"Oriente", color:"#6A3C9E",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración Turística","Lic. en Ciencias de la Educación — Inglés","Lic. en Ciencias Jurídicas","Lic. en Contaduría Pública","Lic. en Informática","Lic. en Lenguaje y Literatura","Lic. en Mercadotecnia","Lic. en Psicología"],
+    "Profesorados":["Prof. en Educación Inicial y Parvularia","Prof. y Lic. en Educación Inicial y Parvularia"]
+  }
+},
+{
+  id:"itca-smig", siglas:"ITCA-FEPADE", nombre:"Escuela Especializada en Ingeniería",
+  depto:"San Miguel", region:"Oriente", color:"#1A7A4A",
+  carreras:{
+    "Técnicos":["Técnico en Ingeniería Civil","Técnico en Ingeniería Eléctrica","Técnico en Ingeniería de Desarrollo de Software"]
+  }
+},
+
+// ===== USULUTÁN =====
+{
+  id:"ugb-usu", siglas:"UGB", nombre:"Universidad Gerardo Barrios",
+  depto:"Usulután", region:"Oriente", color:"#2A5C8A",
+  carreras:{
+    "Licenciaturas":["Lic. en Administración de Empresas","Lic. en Administración de Empresas y Desarrollo Turístico","Lic. en Ciencias Jurídicas","Lic. en Idioma Inglés","Lic. en Marketing y Negocios Digitales"],
+    "Ingenierías":["Ingeniería en Sistemas y Redes"],
+    "Técnicos":["Técnico en Diseño Gráfico","Técnico en Enfermería","Técnico en Idioma Inglés","Técnico en Ingeniería en Sistemas y Redes Informáticas","Técnico en Marketing y Publicidad Digital"]
+  }
+},
+
+// ===== MORAZÁN =====
+{
+  id:"itpsm-mor", siglas:"ITPSM", nombre:"Instituto Tecnológico Padre Segundo Montes",
+  depto:"Morazán", region:"Oriente", color:"#4A7A2A",
+  carreras:{
+    "Técnicos":["Técnico en Hostelería y Turismo","Técnico en Ingeniería Civil","Técnico en Cocina Profesional","Técnico en Construcción","Técnico en Diplomado Cocina Internacional","Técnico en Diseño Arquitectónico Revit y Civil 3D","Técnico en Diseño Digital Autocad","Técnico en Fontanería","Técnico en Instalación de Paneles Solares","Técnico en Instalación de Bombas para Agua y Cisternas","Técnico en Instalaciones Eléctricas Residenciales","Técnico en Panadería y Repostería","Técnico en Topografía"]
+  }
+},
+
+// ===== CURSOS VOCACIONALES =====
+{
+  id:"cv-nacional", siglas:"C.VOC.", nombre:"Cursos Vocacionales (OEF)",
+  depto:"Vocacional", region:"Nacional", color:"#5A8A1A",
+  carreras:{
+    "Cursos Vocacionales":["Agricultura Orgánica (72 horas)","Electricidad Residencial (64 horas)","Panadería (80 horas)","Pastelería (90 horas)","Barbería (90 horas)","Tabla Roca / Cielo Falso (60 horas)"]
+  }
+},
+{
+  id:"et-lebouquet", siglas:"ET/LeBouquet", nombre:"Escuela Técnica — LeBouquet",
+  depto:"Vocacional", region:"Nacional", color:"#8A5A00",
+  carreras:{
+    "Diplomados":["Diplomado Chef Auxiliar de Cocina — 12 meses (Santa Ana, San Salvador, Soyapango)"]
+  }
+},
+{
+  id:"et-agape", siglas:"ET/AGAPE", nombre:"Escuela Técnica — AGAPE",
+  depto:"Vocacional", region:"Nacional", color:"#8A5A00",
+  carreras:{
+    "Diplomados":["Diplomado Chef Auxiliar de Cocina — 7 meses (Sonsonate, Ahuachapán, San Salvador, Usulután)"]
+  }
+},
+{
+  id:"et-agap-cha", siglas:"ET/A.GA.P", nombre:"Escuela Técnica — A.GA.P",
+  depto:"Vocacional", region:"Nacional", color:"#8A5A00",
+  carreras:{
+    "Diplomados":["Diplomado en Cocina Profesional — 12 meses (Chalatenango)","Diplomado en Pastelería Profesional — 12 meses (Chalatenango)"]
+  }
+},
+{
+  id:"et-irca", siglas:"ET/IRCA", nombre:"Escuela Técnica — IRCA",
+  depto:"Vocacional", region:"Nacional", color:"#6A3A00",
+  carreras:{
+    "Diplomados":["Diplomado en Mecánica Automotriz — 24 meses","Diplomado en Gestión Turística — 12 meses","Diplomado en Mecánica en Motocicletas — 12 meses"]
+  }
+},
+{
+  id:"open-english", siglas:"OE", nombre:"Open English",
+  depto:"Vocacional", region:"Nacional", color:"#1A3C7A",
+  carreras:{
+    "Diplomados":["Inglés Virtual 24/7 — 2 años (Niveles A1–B2, profesores nativos, certif. Marco Común Europeo)"]
+  }
+},
+{
+  id:"esiap-platzi", siglas:"ESIAP/Platzi", nombre:"Escuela Superior de Innovación en la Administración Pública",
+  depto:"Vocacional", region:"Nacional", color:"#00A882",
+  carreras:{
+    "Diplomados":["Desarrollo Web (Platzi)","English Academy (Platzi)","Marketing Digital (Platzi)","Inteligencia Artificial y Data Science (Platzi)","Ciberseguridad (Platzi)","Liderazgo y Habilidades Blandas (Platzi)","Diseño de Producto y UX (Platzi)","Desarrollo Móvil (Platzi)","Cloud Computing y DevOps (Platzi)"]
+  }
+},
+{
+  id:"esit-innovacion", siglas:"ESIT", nombre:"Secretaría de Innovación",
+  depto:"Vocacional", region:"Nacional", color:"#2A5C9E",
+  carreras:{
+    "Diplomados":["Diplomado Tech: Cloud, Ciberseguridad, IA — Carreras afines a tecnología","Diplomado Digital: Google Sheets, Docs, Slides, IA básica — Carreras no afines a tecnología"]
+  }
+}
+
+];
+
+// =====================================================
+// STATE
+// =====================================================
+let currentView = 'region';
+let currentDepto = 'todos';
+let currentTipo = 'todos';
+
+const regionColors = {
+  "Occidente": "#1A5C9E",
+  "Norte": "#7A4A2A",
+  "Centro": "#2A6E3C",
+  "Oriente": "#8A2A00",
+  "Nacional": "#5A5A8A"
+};
+
+const regionOrder = ["Occidente","Norte","Centro","Oriente","Nacional"];
+
+const tipoOrder = ["Licenciaturas","Ingenierías","Técnicos","Doctorado","Profesorados","Cursos Vocacionales","Diplomados"];
+
+function tipoClass(tipo) {
+  if (tipo === "Licenciaturas") return "lic";
+  if (tipo === "Ingenierías") return "ing";
+  if (tipo === "Técnicos") return "tec";
+  if (tipo === "Doctorado") return "doc";
+  if (tipo === "Profesorados") return "prof";
+  return "dip";
+}
+
+function tipoLabel(tipo) {
+  return tipo;
+}
+
+function initials(siglas) {
+  return siglas.substring(0, 3).toUpperCase();
+}
+
+function getSearchQuery() {
+  return document.getElementById('search-input').value.trim().toLowerCase();
+}
+
+function highlightText(text, query) {
+  if (!query) return text;
+  const idx = text.toLowerCase().indexOf(query);
+  if (idx === -1) return text;
+  return text.substring(0, idx)
+    + '<span class="search-highlight">' + text.substring(idx, idx + query.length) + '</span>'
+    + text.substring(idx + query.length);
+}
+
+function matchesFilters(inst) {
+  const q = getSearchQuery();
+  
+  // Depto filter
+  if (currentDepto !== 'todos') {
+    if (currentDepto === 'Vocacional') {
+      if (inst.depto !== 'Vocacional') return false;
+    } else {
+      if (inst.depto !== currentDepto) return false;
+    }
+  }
+
+  // Tipo filter
+  if (currentTipo !== 'todos') {
+    const cats = Object.keys(inst.carreras);
+    const match = cats.some(cat => {
+      if (currentTipo === 'Licenciatura') return cat === 'Licenciaturas';
+      if (currentTipo === 'Ingeniería') return cat === 'Ingenierías';
+      if (currentTipo === 'Técnico') return cat === 'Técnicos' || cat === 'Cursos Vocacionales';
+      if (currentTipo === 'Doctorado') return cat === 'Doctorado';
+      if (currentTipo === 'Profesorado') return cat === 'Profesorados';
+      if (currentTipo === 'Diplomado') return cat === 'Diplomados';
+      return false;
+    });
+    if (!match) return false;
+  }
+
+  // Search filter
+  if (q) {
+    const inName = inst.nombre.toLowerCase().includes(q)
+      || inst.siglas.toLowerCase().includes(q)
+      || inst.depto.toLowerCase().includes(q);
+    const inCareer = Object.values(inst.carreras).flat().some(c => c.toLowerCase().includes(q));
+    if (!inName && !inCareer) return false;
+  }
+
+  return true;
+}
+
+function getFilteredCareers(inst) {
+  const q = getSearchQuery();
+  const result = {};
+  for (const [cat, list] of Object.entries(inst.carreras)) {
+    // tipo filter
+    if (currentTipo !== 'todos') {
+      let keep = false;
+      if (currentTipo === 'Licenciatura' && cat !== 'Licenciaturas') continue;
+      if (currentTipo === 'Ingeniería' && cat !== 'Ingenierías') continue;
+      if (currentTipo === 'Técnico' && cat !== 'Técnicos' && cat !== 'Cursos Vocacionales') continue;
+      if (currentTipo === 'Doctorado' && cat !== 'Doctorado') continue;
+      if (currentTipo === 'Profesorado' && cat !== 'Profesorados') continue;
+      if (currentTipo === 'Diplomado' && cat !== 'Diplomados') continue;
+    }
+    if (q) {
+      const filtered = list.filter(c => c.toLowerCase().includes(q));
+      if (filtered.length > 0) result[cat] = filtered;
+    } else {
+      result[cat] = list;
+    }
+  }
+  return result;
+}
+
+function renderUniCard(inst) {
+  const q = getSearchQuery();
+  const filteredCareers = getFilteredCareers(inst);
+  const totalCareers = Object.values(filteredCareers).flat().length;
+
+  // Count badges
+  let countBadges = '';
+  for (const [cat, list] of Object.entries(filteredCareers)) {
+    if (list.length > 0) {
+      const cls = tipoClass(cat);
+      countBadges += `<span class="career-count-badge ${cls}">${list.length} ${cat}</span>`;
+    }
+  }
+
+  // Career sections
+  let careerSections = '';
+  for (const [cat, list] of Object.entries(filteredCareers)) {
+    const cls = tipoClass(cat);
+    const items = list.map(c =>
+      `<div class="career-item ${cls}">${highlightText(c, q)}</div>`
+    ).join('');
+    careerSections += `
+      <div class="career-section">
+        <div class="career-section-title ${cls}">${cat}</div>
+        <div class="career-list">${items}</div>
+      </div>`;
+  }
+
+  const headerOpen = q ? 'open' : '';
+  const bodyOpen = q ? 'open' : '';
+
+  return `
+    <div class="uni-card" id="card-${inst.id}">
+      <div class="uni-card-header ${headerOpen}" onclick="toggleCard(this)">
+        <div class="uni-avatar" style="background:${inst.color}">${initials(inst.siglas)}</div>
+        <div class="uni-info">
+          <h3>${highlightText(inst.siglas, q)}</h3>
+          <div class="uni-full">${highlightText(inst.nombre, q)}</div>
+          <div class="uni-meta">
+            <span class="badge depto">📍 ${inst.depto}</span>
+            <span class="badge tipo-u">${totalCareers} programa${totalCareers !== 1 ? 's' : ''}</span>
+          </div>
+        </div>
+        <span class="uni-toggle">▼</span>
+      </div>
+      <div class="uni-card-body ${bodyOpen}">
+        <div class="career-count-bar">${countBadges}</div>
+        ${careerSections}
+      </div>
+    </div>`;
+}
+
+function renderByRegion() {
+  const filtered = instituciones.filter(matchesFilters);
+  
+  if (filtered.length === 0) {
+    return `<div class="no-results"><div class="emoji">🔍</div><p>No se encontraron instituciones con ese criterio.</p></div>`;
+  }
+
+  // Group by region
+  const byRegion = {};
+  for (const inst of filtered) {
+    const r = inst.region || 'Otros';
+    if (!byRegion[r]) byRegion[r] = [];
+    byRegion[r].push(inst);
+  }
+
+  let html = '';
+  for (const region of regionOrder) {
+    if (!byRegion[region]) continue;
+    const list = byRegion[region];
+    const color = regionColors[region] || '#555';
+    html += `
+      <div class="region-group">
+        <div class="region-header">
+          <div class="region-dot" style="background:${color}"></div>
+          <h2>Zona ${region}</h2>
+          <span class="region-count">${list.length} institución${list.length !== 1 ? 'es' : ''}</span>
+        </div>
+        <div class="uni-grid">
+          ${list.map(renderUniCard).join('')}
+        </div>
+      </div>`;
+  }
+  return html;
+}
+
+function renderByUniversidad() {
+  const filtered = instituciones.filter(matchesFilters);
+  
+  if (filtered.length === 0) {
+    return `<div class="no-results"><div class="emoji">🔍</div><p>No se encontraron instituciones.</p></div>`;
+  }
+
+  // Sort by siglas
+  const sorted = [...filtered].sort((a,b) => a.siglas.localeCompare(b.siglas));
+
+  return `<div class="uni-grid">${sorted.map(renderUniCard).join('')}</div>`;
+}
+
+function renderByCarrera() {
+  const filtered = instituciones.filter(matchesFilters);
+  const q = getSearchQuery();
+
+  if (filtered.length === 0) {
+    return `<div class="no-results"><div class="emoji">🔍</div><p>No se encontraron carreras.</p></div>`;
+  }
+
+  // Build career → [universities] map
+  const careerMap = {};
+  for (const inst of filtered) {
+    const filteredCareers = getFilteredCareers(inst);
+    for (const [cat, list] of Object.entries(filteredCareers)) {
+      for (const career of list) {
+        const key = cat + '||' + career;
+        if (!careerMap[key]) careerMap[key] = { cat, career, unis: [] };
+        careerMap[key].unis.push(inst);
+      }
+    }
+  }
+
+  // Group by tipo
+  const byTipo = {};
+  for (const [key, val] of Object.entries(careerMap)) {
+    if (!byTipo[val.cat]) byTipo[val.cat] = [];
+    byTipo[val.cat].push(val);
+  }
+
+  let html = '';
+  for (const tipo of tipoOrder) {
+    if (!byTipo[tipo]) continue;
+    const list = byTipo[tipo];
+    list.sort((a,b) => a.career.localeCompare(b.career));
+    const cls = tipoClass(tipo);
+    
+    html += `
+      <div class="career-type-group">
+        <div class="career-type-header">
+          <div class="region-dot" style="background:${cls==='lic'?'#1A5C9E':cls==='ing'?'#1A7A4A':cls==='tec'?'#F5A824':cls==='doc'?'#8A0000':cls==='prof'?'#8A1A8A':'#E87A20'}"></div>
+          <h2>${tipo}</h2>
+          <span class="region-count">${list.length} carrera${list.length!==1?'s':''}</span>
+        </div>
+        <div class="career-view-grid">
+          ${list.map(item => `
+            <div class="career-entry">
+              <h4>${highlightText(item.career, q)}</h4>
+              <div class="unis-offering">
+                ${item.unis.map(u => `
+                  <div class="uni-offering-item">
+                    <div class="dot" style="background:${u.color}"></div>
+                    <span><strong>${u.siglas}</strong> — ${u.depto}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>`;
+  }
+  return html;
+}
+
+function renderContent() {
+  const container = document.getElementById('results-container');
+  let html = '';
+  
+  if (currentView === 'region') html = renderByRegion();
+  else if (currentView === 'universidad') html = renderByUniversidad();
+  else html = renderByCarrera();
+  
+  container.innerHTML = html;
+}
+
+function setView(view, btn) {
+  currentView = view;
+  document.querySelectorAll('.view-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderContent();
+}
+
+function setDepto(depto, btn) {
+  currentDepto = depto;
+  document.querySelectorAll('#depto-chips .chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderContent();
+}
+
+function setTipo(tipo, btn) {
+  currentTipo = tipo;
+  document.querySelectorAll('#tipo-chips .chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderContent();
+}
+
+function toggleCard(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function toggleAcc(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  renderContent();
+});
+</script>
+</body>
+</html>
