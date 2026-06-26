@@ -29,6 +29,65 @@
     --transition: 0.22s cubic-bezier(.4,0,.2,1);
   }
 
+  /* ====== DARK MODE ====== */
+  [data-theme="dark"] {
+    --gray-bg: #0F1220;
+    --gray-card: #1C2235;
+    --gray-border: #2E3555;
+    --white: #1C2235;
+    --text-dark: #E8ECF8;
+    --text-mid: #9BA5CC;
+    --text-light: #6B75A0;
+    --shadow: 0 4px 16px rgba(0,0,0,0.35);
+    --shadow-hover: 0 8px 28px rgba(0,0,0,0.50);
+  }
+
+  [data-theme="dark"] body { background: #0F1220; color: #E8ECF8; }
+  [data-theme="dark"] header { background: linear-gradient(135deg, #0A0D1A 0%, #141930 60%, #1E2545 100%); }
+  [data-theme="dark"] .uni-card { background: #1C2235; border: 1px solid #2E3555; }
+  [data-theme="dark"] .uni-card-header { background: #252D45; }
+  [data-theme="dark"] #search-input { background: #1C2235; border-color: #2E3555; color: #E8ECF8; }
+  [data-theme="dark"] #buscar-section { background: #0F1220; border-color: #2E3555; }
+  [data-theme="dark"] .search-bar, [data-theme="dark"] .view-tabs { background: #1C2235; border-color: #2E3555; }
+  [data-theme="dark"] .chip { background: #1C2235; border-color: #2E3555; color: #9BA5CC; }
+  [data-theme="dark"] .chip:hover { border-color: var(--gold); color: var(--gold); }
+  [data-theme="dark"] .chip.active { background: var(--navy-mid); border-color: var(--navy-mid); color: #fff; }
+  [data-theme="dark"] .view-tab { color: #9BA5CC; }
+  [data-theme="dark"] .view-tab.active { background: var(--navy-mid); color: #fff; }
+  [data-theme="dark"] .accordion-item { background: #1C2235; border-color: #2E3555; }
+  [data-theme="dark"] .accordion-header { background: #252D45; color: #E8ECF8; }
+  [data-theme="dark"] .accordion-body { background: #1C2235; color: #C0C8E8; }
+  [data-theme="dark"] .alert-banner.gold { background: #2A2010; border-color: #6B4E10; }
+  [data-theme="dark"] .alert-banner.red { background: #200A0A; border-color: #6B1010; }
+  [data-theme="dark"] .alert-banner.blue { background: #0A1020; border-color: #102060; }
+  [data-theme="dark"] .tip-box { background: #1A2535; border-color: #2A4060; }
+  [data-theme="dark"] .region-header { border-color: #2E3555; }
+  [data-theme="dark"] .section-title .icon { background: #252D45 !important; }
+  [data-theme="dark"] .req-card { background: #1C2235; border-color: #2E3555; }
+  [data-theme="dark"] footer { background: #080B14; }
+  [data-theme="dark"] .footer-divider { border-color: #1A2035; }
+  [data-theme="dark"] .filter-toggle-btn { background: #1C2235; border-color: #2E3555; color: #9BA5CC; }
+  [data-theme="dark"] .process-step { background: #1C2235; }
+  [data-theme="dark"] .cert-card { background: #1C2235; border-color: #2E3555; }
+
+  /* Dark mode toggle button */
+  .dark-mode-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    cursor: pointer;
+    transition: background var(--transition), border-color var(--transition);
+    white-space: nowrap;
+  }
+  .dark-mode-btn:hover { background: rgba(255,255,255,0.20); border-color: rgba(255,255,255,0.40); }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
@@ -193,6 +252,11 @@
   }
 
   /* Hero action buttons */
+  @keyframes btnPulse {
+    0%, 100% { background: linear-gradient(135deg, var(--gold) 0%, #E8961A 100%); color: var(--navy-dark); box-shadow: 0 4px 18px rgba(245,168,36,0.40); }
+    50% { background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); color: var(--navy-dark); box-shadow: 0 4px 18px rgba(255,255,255,0.50); }
+  }
+
   .hero-btn-primary {
     display: inline-flex;
     align-items: center;
@@ -206,11 +270,14 @@
     font-weight: 800;
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(245,168,36,0.40);
-    transition: transform var(--transition), box-shadow var(--transition);
+    animation: btnPulse 1.8s ease-in-out infinite;
+    transition: transform var(--transition);
   }
   .hero-btn-primary:hover {
+    animation: none;
     transform: translateY(-2px);
-    box-shadow: 0 8px 26px rgba(245,168,36,0.50);
+    background: linear-gradient(135deg, var(--gold) 0%, #E8961A 100%);
+    box-shadow: 0 8px 26px rgba(245,168,36,0.55);
   }
   .hero-btn-secondary {
     display: inline-flex;
@@ -1186,7 +1253,10 @@
         <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">Programa de Becas 2026</div>
       </div>
     </div>
-    <div class="header-badge">📅 Becados 2026</div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="header-badge">📅 Becados 2026</div>
+      <button class="dark-mode-btn" id="dark-mode-btn" onclick="toggleDarkMode()">🌙 Oscuro</button>
+    </div>
   </div>
   <div class="header-hero">
     <h1>Oferta Académica <span>Habilitada</span><br>para Becados 2026</h1>
@@ -2573,7 +2643,34 @@ window.addEventListener('scroll', () => {
 // Init
 document.addEventListener('DOMContentLoaded', () => {
   renderContent();
+
+  // Abrir instrucciones por defecto
+  const sec = document.getElementById('instrucciones');
+  const btn = document.querySelector('.hero-btn-secondary');
+  sec.classList.add('open');
+  if (btn) btn.textContent = '✖ Cerrar información';
+
+  // Restaurar modo oscuro si estaba activo
+  if (localStorage.getItem('darkMode') === 'on') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    const dmBtn = document.getElementById('dark-mode-btn');
+    if (dmBtn) dmBtn.textContent = '☀️ Claro';
+  }
 });
+
+function toggleDarkMode() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const btn = document.getElementById('dark-mode-btn');
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    btn.textContent = '🌙 Oscuro';
+    localStorage.setItem('darkMode', 'off');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    btn.textContent = '☀️ Claro';
+    localStorage.setItem('darkMode', 'on');
+  }
+}
 </script>
 </body>
 </html>
