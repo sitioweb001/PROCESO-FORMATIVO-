@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -193,6 +192,58 @@
     line-height: 1.3;
   }
 
+  /* Hero action buttons */
+  .hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, #E8961A 100%);
+    color: var(--navy-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 13px 28px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(245,168,36,0.40);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .hero-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 26px rgba(245,168,36,0.50);
+  }
+  .hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.30);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .hero-btn-secondary:hover {
+    background: rgba(255,255,255,0.20);
+    border-color: rgba(255,255,255,0.50);
+  }
+
+  /* Instrucciones: hidden by default, toggle on click */
+  #instrucciones {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.55s cubic-bezier(.4,0,.2,1), opacity 0.35s ease;
+  }
+  #instrucciones.open {
+    max-height: 5000px;
+    opacity: 1;
+  }
+
   /* ====== MAIN LAYOUT ====== */
   .container {
     max-width: 1200px;
@@ -384,12 +435,45 @@
 
   /* ====== SEARCH BAR ====== */
   #buscar-section {
-    padding: 28px 0 0;
+    padding: 20px 0 0;
     position: sticky;
     top: 0;
     z-index: 100;
     background: var(--gray-bg);
     border-bottom: 1px solid var(--gray-border);
+    transition: padding var(--transition);
+  }
+
+  /* Collapsed state: only show search input row, hide chips */
+  #buscar-section.collapsed .filter-chips {
+    display: none;
+  }
+  #buscar-section.collapsed {
+    padding: 10px 0;
+  }
+
+  /* Toggle button for filter chips */
+  .filter-toggle-btn {
+    display: none; /* shown on mobile */
+    align-items: center;
+    gap: 6px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-border);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-mid);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color var(--transition), color var(--transition);
+  }
+  .filter-toggle-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+  @media (max-width: 768px) {
+    .filter-toggle-btn { display: flex; }
+    #buscar-section { padding: 10px 0 0; }
+    .search-bar { padding-bottom: 10px; }
   }
 
   .search-bar {
@@ -1112,6 +1196,14 @@
       <div class="stat-pill"><span class="num">14</span><span class="lbl">Departamentos<br>cubiertos</span></div>
       <div class="stat-pill"><span class="num">200+</span><span class="lbl">Carreras y<br>programas</span></div>
     </div>
+    <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="hero-btn-primary" onclick="document.getElementById('buscar-section').scrollIntoView({behavior:'smooth'})">
+        🎓 Ver Oferta Académica
+      </button>
+      <button class="hero-btn-secondary" onclick="toggleInstrucciones()">
+        📋 Lee esto antes de elegir tu carrera
+      </button>
+    </div>
   </div>
 </header>
 
@@ -1291,6 +1383,9 @@
         <span class="search-icon">🔍</span>
         <input type="text" id="search-input" placeholder="Buscar carrera, universidad o departamento..." oninput="renderContent()">
       </div>
+      <button class="filter-toggle-btn" id="filter-toggle-btn" onclick="toggleFilterChips()">
+        ⚙️ Filtros
+      </button>
       <div class="view-tabs">
         <button class="view-tab active" onclick="setView('region', this)">🗺️ Por Región</button>
         <button class="view-tab" onclick="setView('universidad', this)">🏛️ Por Universidad</button>
@@ -2430,6 +2525,50 @@ function toggleAcc(header) {
   const body = header.nextElementSibling;
   body.classList.toggle('open');
 }
+
+// Toggle "Lee esto antes de elegir" panel
+function toggleInstrucciones() {
+  const sec = document.getElementById('instrucciones');
+  const btn = document.querySelector('.hero-btn-secondary');
+  const isOpen = sec.classList.toggle('open');
+  btn.textContent = isOpen ? '✖ Cerrar información' : '📋 Lee esto antes de elegir tu carrera';
+  if (isOpen) {
+    setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
+}
+
+// Toggle filter chips on mobile
+function toggleFilterChips() {
+  const chips = document.querySelectorAll('.filter-chips');
+  const btn = document.getElementById('filter-toggle-btn');
+  const visible = chips[0].style.display !== 'none' && chips[0].style.display !== '';
+  chips.forEach(c => c.style.display = visible ? 'none' : 'flex');
+  btn.textContent = visible ? '⚙️ Filtros' : '✖ Cerrar filtros';
+}
+
+// Auto-collapse filter on scroll (mobile)
+let lastScrollY = 0;
+let filterChipsHidden = false;
+
+window.addEventListener('scroll', () => {
+  if (window.innerWidth > 768) return; // only on mobile
+  const currentY = window.scrollY;
+  const buscar = document.getElementById('buscar-section');
+  const chips = document.querySelectorAll('.filter-chips');
+
+  if (currentY > lastScrollY && currentY > 80 && !filterChipsHidden) {
+    // Scrolling down — collapse chips
+    chips.forEach(c => c.style.display = 'none');
+    document.getElementById('filter-toggle-btn').textContent = '⚙️ Filtros';
+    filterChipsHidden = true;
+  } else if (currentY < lastScrollY && filterChipsHidden) {
+    // Scrolling up — show chips
+    chips.forEach(c => c.style.display = 'flex');
+    document.getElementById('filter-toggle-btn').textContent = '✖ Cerrar filtros';
+    filterChipsHidden = false;
+  }
+  lastScrollY = currentY;
+}, { passive: true });
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
